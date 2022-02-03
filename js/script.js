@@ -1,11 +1,12 @@
 let num = 266219;
+let multiply;
+let res;
+let degree;
 
-let multiply = num.toString().split("");
+multiply = num.toString().split("");
+res = multiply.reduce((acc, rec) => acc * rec);
+degree = res**3;
 
-const res = multiply.reduce((acc, rec) => acc * rec);
 console.log(res);
-
-let degree = res**3;
 console.log(degree);
-
 console.log(degree.toString().split("").slice(0,2).join(""));
