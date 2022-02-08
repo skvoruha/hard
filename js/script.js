@@ -1,16 +1,36 @@
+"use strict";
 
-// const isNumber = function(num){
-//    return /^-?[\d.]+(?:e-?\d+)?$/.test(num);
-// }
+const week = ['Понедельник', 'Вторник', 'Среда', 'Четверг',
+  'Пятница', 'Суббота', 'Воскресенье'];
 
-const isNumber = function (num) {
-  return (typeof num == 'string' || typeof num == 'number') && !isNaN(num - 0) && num !== '';
+const todayWeek = function () {
+  let numDay = new Date().getDay();
+  // у нас воскресенье последний день недели, а не первый
+  return (numDay) ? numDay - 1 : 6;
 };
 
-do {
-  screenPrice = prompt("Сколько будет стоить данная работа?").trim();
-} while(!isNumber(screenPrice))
 
-console.log(screenPrice);
-console.log(screenPrice);
-console.log(typeof screenPrice);
+const allWeekDay = function () {
+  const body = document.querySelector('body');
+  const current = todayWeek();
+
+  let output = '';
+
+  week.forEach((day, index) => {
+    let dayWeek = day;
+
+    // выхи
+    if (index > 4) {
+      dayWeek = dayWeek.italics()
+    }
+    // сегодняшний день
+    if (index === current) {
+      dayWeek = dayWeek.bold()
+    }
+    // ставим тег br для переноса строки
+    output += dayWeek + '<br />';
+  });
+  body.innerHTML = output;
+};
+
+allWeekDay();
