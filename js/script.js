@@ -8,9 +8,9 @@ const isNumber = function (num) {
 };
 
 do {
-  screenPrice = prompt("Сколько будет стоить данная работа?").trim();
+  screenPrice = prompt("Сколько будет стоить данная работа?");
 } while(!isNumber(screenPrice))
 
-console.log(screenPrice);
-console.log(screenPrice);
+
+console.log(screenPrice.trim());
 console.log(typeof screenPrice);
