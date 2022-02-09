@@ -21,11 +21,11 @@ const allWeekDay = function () {
 
     // выхи
     if (index > 4) {
-      dayWeek = dayWeek.italics()
+      dayWeek = "<i>" + dayWeek + "</i>"
     }
     // сегодняшний день
     if (index === current) {
-      dayWeek = dayWeek.bold()
+      dayWeek = "<b>" + dayWeek + "</b>"
     }
     // ставим тег br для переноса строки
     output += dayWeek + '<br />';
