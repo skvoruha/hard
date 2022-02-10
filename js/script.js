@@ -25,7 +25,7 @@ const allWeekDay = function () {
     }
     // сегодняшний день
     if (index === current) {
-      dayWeek = "<b>" + dayWeek + "</b>"
+      dayWeek = "<dev><b>" + dayWeek + "</b></dev>"
     }
     // ставим тег br для переноса строки
     output += dayWeek + '<br />';
