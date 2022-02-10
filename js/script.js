@@ -21,7 +21,7 @@ week.forEach((element, index) => {
     }
     // сегодняшний день
     if (index === current) {
-      document.getElementsByClassName('day')[index].style.fontWeight = "900";
+      document.getElementsByClassName('day')[index].style.fontWeight = "Bold";
     }
 });
 
