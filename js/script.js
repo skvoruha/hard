@@ -25,28 +25,3 @@ week.forEach((element, index) => {
     }
 });
 
-
-// const allWeekDay = function () {
-//   const body = document.querySelector('body');
-//   const current = todayWeek();
-
-//   let output = '';
-
-//   week.forEach( => {
-//     let dayWeek = day;
-
-//     // выхи
-//     if (index > 4) {
-//       dayWeek = "<i>" + dayWeek + "</i>"
-//     }
-//     // сегодняшний день
-//     if (index === current) {
-//       dayWeek = "<b>" + dayWeek + "</b>"
-//     }
-//     // ставим тег br для переноса строки
-//     output += dayWeek + '<br />';
-//   });
-//   body.innerHTML = output;
-// };
-
-// allWeekDay();
