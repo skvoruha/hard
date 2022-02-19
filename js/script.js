@@ -18,7 +18,7 @@ const todayWeek = function () {
 let screenOutput = "";
 
 // функция окончаний
-setInterval(function checkingTimeCompletion(){
+function checkingTimeCompletion(){
   let dateTime = new Date();
   const nowTime = new Date().toLocaleTimeString();
   const nowDate = new Date().toLocaleDateString();
@@ -80,5 +80,7 @@ setInterval(function checkingTimeCompletion(){
   body.innerHTML +=  "<div class='day'>" + nowDate + " " + nowTime +  "</div>"
   screenOutput = ""
 
-},1000)
+}
+
+setInterval(checkingTimeCompletion,1000)
 
