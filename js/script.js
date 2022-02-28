@@ -1,26 +1,41 @@
-const paragraph = document.getElementById('paragraph')
-const input = document.querySelector('input')
+const btn = document.querySelector('#start'),
+    elem = document.querySelector('.box'),
+    reset = document.querySelector('#end')
+
+let active = false
+// Изначальная позиция квадрата
+let pos = 0;
+let idInterval
+
+function myAnimation() {
+    pos++; // Увеличиваем позицию квадрата на единицу
 
 
-function debounce(f, t) {
-  return function (args) {
-    let previousCall = this.lastCall;
-    this.lastCall = Date.now();
-    if (previousCall && ((this.lastCall - previousCall) <= t)) {
-      clearTimeout(this.lastCallTimer);
+    if (pos < 300) {
+      elem.style.top = pos + "px"; // Устанавливаем значение top для инлайн стилей у квадрата
+      elem.style.left = pos + 'px'; // // Устанавливаем значение left для инлайн стилей у квадрата
+      idInterval = requestAnimationFrame(myAnimation); // Запуск анимации
+    } else {
+      active = false
     }
-    this.lastCallTimer = setTimeout(() => f(args), t);
-  }
 }
 
-let logger = () => {
-  console.log('проверка');
-  paragraph.textContent = input.value};
- // debounce: call the logger when two seconds have elapsed since the last call
-let debouncedLogger = debounce(logger, 300);
-input.addEventListener('input', () => {
-  debouncedLogger()
+btn.addEventListener('click', () => {
+  if (active) {
+    cancelAnimationFrame(idInterval)
+    console.log(' true');
+    active = false
+  } else {
+    idInterval = requestAnimationFrame(myAnimation);
+    console.log(' false');
+    active = true
+  }
+});
+
+reset.addEventListener('click', ()=>{
+  cancelAnimationFrame(idInterval)
+  active = false
+  pos = 0
+  elem.style.top = pos + "px"; // Устанавливаем значение top для инлайн стилей у квадрата
+  elem.style.left = pos + 'px'; // // Устанавливаем значение left для инлайн стилей у квадрата
 })
-
-
-// "My args are 7, 8, 9" - logged after two seconds
