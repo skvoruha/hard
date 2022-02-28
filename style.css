@@ -8,3 +8,7 @@
 p {
   font-size: 6rem;
 }
+#input {
+  margin: 20px;
+  padding: 10px;
+}
