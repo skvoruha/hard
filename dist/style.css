@@ -56,3 +56,54 @@ main {
   font-size: 180px;
   background-color: cornsilk;
 }
+
+.card-img-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  height: 230px;
+  width: 20%;
+}
+.card-img-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: auto;
+  max-width: 200px;
+  max-height: 230px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.card-img-wrapper {
+  height: 250px;
+}
+.card {
+  flex-direction: row !important;
+}
+.card-item {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+  padding-bottom: 5px;
+}
+.card-item span:first-child {
+  font-weight: 700;
+}
+.card-film {
+  font-size: 18px;
+}
+.card-film span:first-child {
+  font-weight: 700;
+}
+.input-filter {
+  margin-bottom: 20px;
+  height: 30px;
+  width: 180px;
+}

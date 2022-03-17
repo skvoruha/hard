@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="js/main.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-3 col-xl-2 d-none d-lg-block">
+            <div class="filter">
+              <div class="filter-title">
+                <h5>Фильтр</h5>
+              </div>
+              <div class="filter" id="filter">
+                <select class="input-filter" name="parameter" id="parameter">
+                    <option value="" selected>Select the parameter</option>
+                </select>
+                <select class="input-filter"  id="selectParameter">
+                    <option value="" selected>Select the value</option>
+                </select>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-9 col-xl-10">
+            <div class="container">
+              <div class="row heroes">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
